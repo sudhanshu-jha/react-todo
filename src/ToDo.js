@@ -9,12 +9,12 @@ class ToDo extends Component {
         this.state = {
             // this is where the data goes
             list: [
-                {
-                    'todo': 'Django'
-                },
-                {
-                    'todo': 'Angular'
-                }
+                // {
+                //     'todo': 'Django'
+                // },
+                // {
+                //     'todo': 'Angular'
+                // }
             ],
             todo: ''
         };
@@ -60,17 +60,17 @@ class ToDo extends Component {
         return (
             <div className="ToDo">
                 <img className="Logo" src={Logo} alt="React logo"/>
-                <h1 className="ToDo-Header">React To Do</h1>
+                <h1 className="ToDo-Header">Tasks</h1>
                 <div className="ToDo-Container">
 
                     <div className="ToDo-Content">
 
                         {this.state.list.map((item, key) => {
                                 return <ToDoItem
-                                                key={key}
-                                                item={item.todo}
-                                                deleteItem={this.deleteItem.bind(this, key)}
-                                                />
+                                    key={key}
+                                    item={item.todo}
+                                    deleteItem={this.deleteItem.bind(this, key)}
+                                />
                           }
                         )}
                     </div>
